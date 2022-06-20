@@ -1,6 +1,7 @@
 import sys
 import fire
 import questionary
+import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -116,6 +117,14 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+    data_path = questionary.text("Where would you like to store your data?").ask()
+    header = ['Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit Score', 'Interest Rate']
+    with open(data_path, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(header)
+        for bank in qualifying_loans:
+            csvwriter.writerow(bank)
+
 
 
 def run():
