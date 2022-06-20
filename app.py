@@ -111,6 +111,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     return bank_data_filtered
 
 
+#This Function satisfies Acceptance Criteria 1
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
@@ -119,9 +120,19 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
-    data_path = questionary.text("Where would you like to store your data?").ask()
-    header = ['Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit Score', 'Interest Rate']
-    save_csv(data_path, header, qualifying_loans)    
+    #Satisfies Acceptance Criteria 2
+    if len(qualifying_loans) == 0:
+        return
+
+    #Satisfies Acceptanc Criteria 3
+    save_file = questionary.text("Would you like to save a list of loans you qualify for? (Y/N)").ask()
+
+    #Satisfies Acceptance Criteria 4
+    if save_file == 'Y' or save_file == 'Yes':  
+        data_path = questionary.text("Where would you like to store your data?").ask()
+        header = ['Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit Score', 'Interest Rate']
+        #Satisfies Acceptance Criteria 5
+        save_csv(data_path, header, qualifying_loans)    
 
 
 
