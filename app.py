@@ -118,20 +118,23 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
     #Satisfies Acceptance Criteria 2
+    #if there are no qualifying loans, exit this function
     if len(qualifying_loans) == 0:
         return
 
     #Satisfies Acceptanc Criteria 3
+    #Asks if the user would like to save the list of qualifying loans
     save_file = questionary.text("Would you like to save a list of loans you qualify for? (Y/N)").ask()
 
     #Satisfies Acceptance Criteria 4
-    if save_file == 'Y' or save_file == 'Yes':  
+    #Checks user response. If user wants to save, then save csv
+    if save_file == 'Y' or save_file == 'Yes': 
+        #gets path to write file to  
         data_path = questionary.text("Where would you like to store your data?").ask()
         header = ['Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit Score', 'Interest Rate']
         #Satisfies Acceptance Criteria 5
+        #sends data to function to save csv file
         save_csv(data_path, header, qualifying_loans)    
 
 

@@ -6,6 +6,7 @@ This contains a helper function for loading and saving CSV files.
 """
 import csv
 
+#saves csv file based on parameters given to the function
 def save_csv(csvpath, header, bank_list):
     with open(csvpath, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
