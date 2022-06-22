@@ -1,0 +1,48 @@
+ 1000  exit
+ 1001  dir
+ 1002  ls
+ 1003  cd FinTech_Workspace
+ 1004  ls
+ 1005  cd Challenges
+ 1006  ls
+ 1007  cd FinTechChallenge2
+ 1008  python app.py
+ 1009  ls
+ 1010  conda activate dev
+ 1011  python app.py
+ 1012  python app.py
+ 1013  python app.py
+ 1014  git add .
+ 1015  git commit -m "Added comments to files"
+ 1016  git push
+ 1017  python app.py
+ 1018  python app.py
+ 1019  python app.py
+ 1020  python app.py
+ 1021  python app.py
+ 1022  python app.py
+ 1023  python app.py
+ 1024  python app.py
+ 1025  git add .
+ 1026  git commit -m "Changed questionary text to confirm"
+ 1027  git push
+ 1028  pip freeze
+ 1029  python --version
+ 1030  git add .
+ 1031  git commit -m "Adding initial readme file"
+ 1032  git push
+ 1033  python app.py
+ 1034  ~clear
+ 1035  clear
+ 1036  python app.py
+ 1037  python app.py
+ 1038  clear
+ 1039  python app.py
+ 1040  clear
+ 1041  python app.py
+ 1042  git add README.md
+ 1043  git commit -m "Changed Readme"
+ 1044  git push
+ 1045  git add .
+ 1046  git commit -m "adding images"
+ 1047  git push
