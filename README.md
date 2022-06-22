@@ -29,7 +29,19 @@ Given a csv file of loans that are available, save the loans that you qualify fo
 
 ## Usage
 
+To start the application, run the following:
+```
+python app.py
+```
 
+You will be prompted to enter the location of the qualifying loans. 
+![Loan Qualifier Prompts](Images/input.png)
+
+After, you will be prompted to enter information needed to determine the loans you qualify for and whether you would like to save the list.
+![User Information](Images/save.png)
+
+If you decide to save list, you will need to give the output location of the csv file.
+![Save Output](Images/output.png)
 
 ---
 
