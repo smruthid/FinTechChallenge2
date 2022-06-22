@@ -125,11 +125,11 @@ def save_qualifying_loans(qualifying_loans):
 
     #Satisfies Acceptanc Criteria 3
     #Asks if the user would like to save the list of qualifying loans
-    save_file = questionary.text("Would you like to save a list of loans you qualify for? (Y/N)").ask()
+    save_file = questionary.confirm("Would you like to save a list of loans you qualify for?").ask()
 
     #Satisfies Acceptance Criteria 4
     #Checks user response. If user wants to save, then save csv
-    if save_file == 'Y' or save_file == 'Yes': 
+    if save_file: 
         #gets path to write file to  
         data_path = questionary.text("Where would you like to store your data?").ask()
         header = ['Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit Score', 'Interest Rate']
